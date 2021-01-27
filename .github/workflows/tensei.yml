@@ -1,0 +1,20 @@
+on:
+  schedule:
+  - cron: "36 15 * * 0"
+# UTC update time
+jobs:
+  downloader:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2.0.0
+      - name: Inject Rclone&Aria2 config
+        run: |
+          mkdir -p ~/.config/rclone/
+          cat >  ~/.config/rclone/rclone.conf  << EOF
+          ${{ secrets.RCLONE_CONF }}
+          EOF
+          mkdir -p ~/.aria2/
+          cat >  ~/.aria2/aria2.conf  << EOF
+          ${{ secrets.ARIA2_CONF }}
+          EOF
+      - run: sudo bash run.sh
