@@ -10,8 +10,8 @@ from rich import print
 from typing import overload,Dict, List
 
 class Aria2Downloader():
-    def __init__(self, config: Dict):
-        self.exec = config["downloader"]
+    def __init__(self):
+        ...
 
     def get_extra_arg(self) -> str:
         return f"--seed-time=0 -d downloads -i dlist"
@@ -20,12 +20,7 @@ class Aria2Downloader():
         targets = '\n'.join(targets)
         open("dlist", "w+").write(targets)
 
-    def download(self, targets: List[str]):
-        self.generate_input_file(targets)
-        # command = self.exec +" "+ self.get_extra_arg()
-        # print(":computer:",command)
-        # return subprocess.call(command)
-        # return command
+
 
 class RSSReader():
     max_item_size = 5
@@ -61,7 +56,7 @@ config_file = open("config.json", "r+")
 config = json.load(config_file)
 
 if __name__ == "__main__":
-    downloader = Aria2Downloader(config)
+    downloader = Aria2Downloader()
     rss = RSSReader(config)
     logger = ConfigLogger(config, config_file)
     links = list(rss.export_download_link())
