@@ -1,7 +1,7 @@
 on:
   schedule:
   - cron: "36 15 * * 0"
-# UTC update time
+# latest pub time Sun, 24 Jan 2021 15:33:23 -0000
 jobs:
   downloader:
     runs-on: ubuntu-latest
