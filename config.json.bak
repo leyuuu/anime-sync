@@ -6,9 +6,6 @@
             "link": "https://nyaa.si/?page=rss&q=Ohys-Raws+Mushoku+Tensei+720&c=0_0&f=0"
         }
     ],
-    "downloader": "aria2c",
-    "uploader": "rclone",
-    "dest": "OneDrive:sync",
     "log": [
         "https://nyaa.si/download/1325531.torrent",
         "https://nyaa.si/download/1328955.torrent"
