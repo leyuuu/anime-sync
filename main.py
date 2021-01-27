@@ -27,18 +27,6 @@ class Aria2Downloader():
         # return subprocess.call(command)
         # return command
 
-class RcloneUploader():
-    def __init__(self,config):
-        self.config = config
-
-    def get_extra_arg(self) -> str:
-        return f""
-    def upload(self):
-        command = f"{config['uploader']} copy downloads {config['dest']}"
-        # return subprocess.call(command)
-        print(":computer:",command)
-        return command
-
 class RSSReader():
     max_item_size = 5
     def __init__(self,config):
@@ -74,7 +62,6 @@ config = json.load(config_file)
 
 if __name__ == "__main__":
     downloader = Aria2Downloader(config)
-    uploader = RcloneUploader(config)
     rss = RSSReader(config)
     logger = ConfigLogger(config, config_file)
     links = list(rss.export_download_link())
@@ -85,5 +72,4 @@ if __name__ == "__main__":
         exit(1)
     downloader.generate_input_file(links)
     logger.log(links)
-    # uploader.upload()
 
