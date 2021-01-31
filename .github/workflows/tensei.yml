@@ -1,6 +1,6 @@
 on:
   schedule:
-  - cron: "36-40/2 15 * * 0"
+  - cron: "36-40/2 15-16 * * 0"
 # latest pub time Sun, 24 Jan 2021 15:33:23 -0000
 jobs:
   downloader:
