@@ -1,6 +1,7 @@
 on:
   schedule:
-  - cron: "35 15 * * 0"
+  - cron: "30 15 * * 0"
+  - cron: "34 15 * * 0"
   - cron: "38 15 * * 0"
   - cron: "42 15 * * 0"
 # latest pub time Sun, 24 Jan 2021 15:33:23 -0000
