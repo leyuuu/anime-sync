@@ -13,12 +13,9 @@ class Aria2Downloader():
     def __init__(self):
         ...
 
-    def get_extra_arg(self) -> str:
-        return f"--seed-time=0 -d downloads -i dlist"
-
     def generate_input_file(self, targets: List[str]):
         targets = '\n'.join(targets)
-        open("dlist", "w+").write(targets)
+        open("dlist.txt", "w+").write(targets)
 
 
 
