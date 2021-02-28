@@ -17,4 +17,4 @@ jobs:
           cat >  ~/.aria2/aria2.conf  << EOF
           ${{ secrets.ARIA2_CONF }}
           EOF
-      - run: sudo bash run.sh
+      - run: bash run.sh
