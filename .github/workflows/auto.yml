@@ -1,10 +1,9 @@
 on:
+  workflow_dispatch:
+  watch:
+    types: [started]
   schedule:
-  - cron: "22 15 * * 0"
-  - cron: "28 15 * * 0"
-  - cron: "32 15 * * 0"
-  - cron: "36 15 * * 0"
-  - cron: "40 15 * * 0"
+    - cron: "22 15 * * 0"
 # latest pub time Sun, 24 Jan 2021 15:33:23 -0000
 jobs:
   downloader:
