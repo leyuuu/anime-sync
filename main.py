@@ -58,7 +58,7 @@ def main():
     print(":tada:", f"{len(links)} file need to download, Start generate download manifest file.")
     open(output_file, "w+").write('\n'.join(links))
     logger.log(links)
-    os.exit(1)
+    exit(1)
 
 
 if __name__ == "__main__":
