@@ -1,4 +1,4 @@
-drivepath="NutStore:Downloads/sync"
+drivepath="NutStore2:Downloads/sync"
 
 curl https://rclone.org/install.sh | sudo bash
 rclone copy $drivepath/config.json .
