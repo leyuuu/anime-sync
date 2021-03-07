@@ -1,3 +1,5 @@
+set -x
+
 drivepath="NutStore2:Downloads/sync"
 
 curl https://rclone.org/install.sh | sudo bash
