@@ -62,7 +62,7 @@ def main():
 
 
 if __name__ == "__main__":
-    count = 30
+    count = 60
     while count > 0:
         main()
         time.sleep(60 * 1000)
