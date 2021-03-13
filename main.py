@@ -53,7 +53,7 @@ def main():
     links = list(rss.export_download_link())
     links = logger.filter(links)
     if len(links) == 0:
-        print(time.localtime(time.time()) + " Current queue is empty.")
+        print("Current queue is empty.")
         return
     print(":tada:", f"{len(links)} file need to download, Start generate download manifest file.")
     open(output_file, "w+").write('\n'.join(links))
